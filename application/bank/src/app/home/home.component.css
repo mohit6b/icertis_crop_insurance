@@ -1,0 +1,15 @@
+.main-content {
+    margin: 5% 5%;
+    background-color: blue;
+}
+
+.mat-tab-label .mat-tab-label-content {
+    color: rgb(14, 13, 13);
+}
+
+.box-content {
+    height: 60vh;
+    margin: 2% 2%;
+    padding: 2%;
+    background-color: blue;
+}

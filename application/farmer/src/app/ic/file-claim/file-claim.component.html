@@ -1,0 +1,53 @@
+<mat-progress-bar  mode="indeterminate" *ngIf="progress"></mat-progress-bar>
+
+
+    <mat-card class="img">
+      <mat-card-header>
+        <mat-card-title>Upload Policy Document</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form">
+        <mat-card-content>
+
+            <input type="file"
+       id="uploadPicture"
+       class="hidden-input"
+       accept="image/jpeg, .jpeg, image/png, .png, image/pjpeg, .jpg"
+       (change)="selectFile($event.target.files[0])">
+
+        </mat-card-content>
+        <button mat-stroked-button color="accent" [disabled]="imageUpl" class="" (click)='onSubmit()'>Fetch details</button>
+      </form>
+    </mat-card>
+
+
+
+
+    <mat-card *ngIf="showDetails" class="details">
+        <mat-card-header>
+          <mat-card-title>Details fetched from the document</mat-card-title>
+        </mat-card-header>
+          <mat-card-content>
+              <div class="row">
+                  <div class="point">
+                          <mat-card>Policy Number - {{ policy.policyNumber }}</mat-card>
+                          <mat-card>Name - {{ policy.fullName }}</mat-card>
+                  </div>
+                  <div class="point">
+                          <mat-card>Issued on  - {{ policy.issuedOn |date}}</mat-card>
+                          <mat-card>Vaild Till - {{ policy.validThru| date }}</mat-card>
+                  </div>
+                  <div class="point">
+                      <mat-card>Policy Amount - {{ policy.amount| currency:'inr' }}</mat-card>
+                      <mat-card>Farm Co-ordinates - {{ policy.farm }}</mat-card>
+              </div>
+
+              </div>
+
+
+          </mat-card-content>
+          <button mat-stroked-button color="accent" class="" (click)='fileClaim()'>Accept the details and file claim</button>
+
+      </mat-card>
+
+

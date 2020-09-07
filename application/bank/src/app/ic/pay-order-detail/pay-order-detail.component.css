@@ -1,0 +1,16 @@
+.row{
+    width: 80%;
+    margin: auto auto;
+}
+
+.point mat-card{
+    width: 35%;
+    margin: 1% 2%;
+    display: inline-block;
+}
+
+mat-card{
+    width: 70%;
+    text-align: right;
+    margin: auto auto;
+}

@@ -1,0 +1,23 @@
+<mat-progress-bar  mode="indeterminate" *ngIf="progress"></mat-progress-bar>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Upload Policy Document</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+        <mat-card-content>
+          
+            <input type="file"
+       id="uploadPicture"
+       class="hidden-input"
+       accept="image/jpeg, .jpeg, image/png, .png, image/pjpeg, .jpg"
+       (change)="selectFile($event.target.files[0])">
+          
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="" (click)='onSubmit()'>Submit</button>
+      </form>
+    </mat-card>
+  
+  </div>
